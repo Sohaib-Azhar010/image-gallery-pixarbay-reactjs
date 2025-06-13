@@ -2,7 +2,7 @@ import React from "react";
 
 const Search = ({ query, setQuery }) => {
   return (
-    <form className="input-group my-5 mx-auto w-50" onSubmit={(e) => e.preventDefault()}>
+    <form className="input-group my-5 mx-auto w-100" onSubmit={(e) => e.preventDefault()}>
       <input
         type="text"
         className="form-control form-control-lg"
