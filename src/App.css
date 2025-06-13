@@ -1,38 +1,110 @@
-.App {
-  text-align: center;
+/* Light Info Blue Background */
+body {
+  background-color: #b7daff;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.card{
+  background-color: #e7f3ff
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Card Title Styling */
+.card-title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Bubble Container */
+.bubbles {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* Main Content on Top */
+.container,
+.navbar {
+  position: relative;
+  z-index: 2;
+}
+
+/* Bubble Styling */
+.bubbles span {
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: rgb(255, 255, 255);
+  bottom: -150px;
+  animation: bubble 18s linear infinite;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(2px);
+}
+
+/* Customize each bubble's size and speed */
+.bubbles span:nth-child(1) {
+  left: 10%;
+  width: 60px;
+  height: 60px;
+  animation-duration: 20s;
+}
+.bubbles span:nth-child(2) {
+  left: 25%;
+  width: 45px;
+  height: 45px;
+  animation-duration: 16s;
+}
+.bubbles span:nth-child(3) {
+  left: 40%;
+  width: 50px;
+  height: 50px;
+  animation-duration: 18s;
+}
+.bubbles span:nth-child(4) {
+  left: 55%;
+  width: 35px;
+  height: 35px;
+  animation-duration: 22s;
+}
+.bubbles span:nth-child(5) {
+  left: 70%;
+  width: 55px;
+  height: 55px;
+  animation-duration: 19s;
+}
+.bubbles span:nth-child(6) {
+  left: 80%;
+  width: 48px;
+  height: 48px;
+  animation-duration: 17s;
+}
+.bubbles span:nth-child(7) {
+  left: 90%;
+  width: 65px;
+  height: 65px;
+  animation-duration: 21s;
+}
+
+/* Animation Keyframes */
+@keyframes bubble {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.4;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  50% {
+    opacity: 0.7;
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    transform: translateY(-1000px) scale(1.5);
+    opacity: 0;
   }
 }
